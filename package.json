@@ -1,0 +1,21 @@
+{
+  "name": "mot-playwright-workshop",
+  "version": "1.0.0",
+  "description": "This repo is used as been used as a part of the [Hands on Test Automation With Playwright](https://www.ministryoftesting.com/events/hands-on-test-automation-with-playwright#sessions) workshop.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BMayhew/mot-playwright-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BMayhew/mot-playwright-workshop/issues"
+  },
+  "homepage": "https://github.com/BMayhew/mot-playwright-workshop#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.31.2"
+  }
+}
