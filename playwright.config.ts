@@ -37,6 +37,7 @@ export default defineConfig({
     ignoreHTTPSErrors: true,
     video: "retain-on-failure",
     trace: "retain-on-failure",
+    screenshot: "only-on-failure",
     // headless: false,
 
     /* Base URL to use in actions like `await page.goto('/')`. */
