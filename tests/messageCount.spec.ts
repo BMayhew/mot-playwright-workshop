@@ -4,7 +4,7 @@ test.describe("/admin Checks", async () => {
   // Creating a variable so we can dynamically change the count number
   let count = "100";
 
-  test.beforeAll(async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
     // This calls an async function that exists at the bottom of this page, it takes the page instance and a number
     await mockMessageCount(page, count);
 
