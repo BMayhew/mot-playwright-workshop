@@ -1,30 +1,21 @@
 // https://playwright.dev/docs/api/class-test
+// Each test has final line which calls an asynchronous function to run the same test from a non spec file.
+// This is to demonstrate how you can use helpers to create/setup data for you within your tests
 
 import { test, expect } from "@playwright/test";
+import { browserExample, apiExample } from "../lib/demoFile";
 
 test("basic test", async ({ page }) => {
   await page.goto("https://playwright.dev/");
   const name = await page.innerText(".navbar__title");
   expect(name).toBe("Playwright");
+
+  await browserExample();
 });
 
-test("basic browser test", async (context) => {
-  const page = context.page;
-  await page.goto("https://playwright.dev/");
-  const name = await page.innerText(".navbar__title");
-  expect(name).toBe("Playwright");
-});
-
-// test("basic api test", async ({ request }) => {
-//   const response = await request.get("https://playwright.dev");
-//   await expect(response).toBeOK();
-// });
-
-test("basic api test", async (context) => {
-  const request = context.request;
+test("basic api test", async ({ request }) => {
   const response = await request.get("https://playwright.dev");
   await expect(response).toBeOK();
-});
 
-// page and request objects are being destructured in the commented out examples
-// syntax sugar for pulling and object out of a property
+  await apiExample();
+});
