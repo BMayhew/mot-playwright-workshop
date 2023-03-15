@@ -42,4 +42,5 @@ Fulfills route's request with given response.
 * [LinkedIn](https://www.linkedin.com/in/butchmayhew/) - Connect with me!
 * [Twitter](https://twitter.com/ButchMayhew) - Connect with me!
 * [Playwright Discord - Community](https://discord.gg/playwright-807756831384403968) - Lots of questions, answers, and discussion
+* [Javascript Visualized Promises0async-awaits](https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke)
 * [Your Feedback is a Gift to me!](https://forms.gle/UbpSfNi7XcWUmcu36) - Please let me know your thoughts, I'm always looking for areas to improve or  celebrating a success!
