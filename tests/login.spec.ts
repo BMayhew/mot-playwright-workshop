@@ -16,11 +16,9 @@ test("Login as Admin", async ({ page }) => {
   await expect(logoutLink).toBeVisible();
   await expect(logoutLink).toHaveText("Logout");
 
-  await page.logoutLink.click();
+  await logoutLink.click();
 
   await page.waitForLoadState("networkidle");
-  // await page.screenshot({ path: "loggedOut.png" });
-  // await page.reload();
 
   await expect(logoutLink).not.toBeInViewport();
   await expect(logoutLink).not.toBeVisible();
