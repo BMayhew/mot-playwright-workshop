@@ -10,8 +10,18 @@ test("Login as Admin", async ({ page }) => {
   await page.getByTestId("password").fill("password");
   await page.getByTestId("submit").click();
 
-  await expect(page.getByRole("link", { name: "Logout" })).toHaveText("Logout");
+  const logoutLink = page.getByRole("link", { name: "Logout" });
 
-  await page.getByRole("link", { name: "Logout" }).click();
-  await expect(page.getByRole("link", { name: "Logout" })).not.toBeVisible();
+  await expect(logoutLink).toBeInViewport();
+  await expect(logoutLink).toBeVisible();
+  await expect(logoutLink).toHaveText("Logout");
+
+  await page.logoutLink.click();
+
+  await page.waitForLoadState("networkidle");
+  // await page.screenshot({ path: "loggedOut.png" });
+  // await page.reload();
+
+  await expect(logoutLink).not.toBeInViewport();
+  await expect(logoutLink).not.toBeVisible();
 });
