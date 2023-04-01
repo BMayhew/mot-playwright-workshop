@@ -12,3 +12,9 @@ We will use <https://playwright.dev/docs/pom> as our guide in creating our page 
 `constructor(private readonly page: Page) {}`
 
 I've also created a 2nd test which uses an async function that takes in a username and password and clicks submit button to login from the spec file.
+
+I also edited the package.json file to add a new script to run the tests.
+
+`npm run test` - will run all tests
+`npm run ui` - will run playwright in UI mode, a feature introduced in 1.32.0
+  

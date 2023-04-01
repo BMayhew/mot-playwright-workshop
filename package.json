@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "This repo is used as been used as a part of the [Hands on Test Automation With Playwright](https://www.ministryoftesting.com/events/hands-on-test-automation-with-playwright#sessions) workshop.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "ui": "npx playwright test --ui"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BMayhew/mot-playwright-workshop.git"
