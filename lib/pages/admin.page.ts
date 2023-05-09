@@ -11,6 +11,10 @@ export class AdminPage {
 
   readonly logoutLink = this.page.getByRole("link", { name: "Logout" });
 
+  // Example of how you can chain locators together from variables
+  readonly messageCountLink = this.page.locator('[href*="#/admin/messages"]');
+  readonly messageCountSpan = this.messageCountLink.locator("span");
+
   async goto() {
     this.page.goto("/#/admin", { waitUntil: "networkidle" });
   }
